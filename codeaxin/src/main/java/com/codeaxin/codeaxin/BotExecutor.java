@@ -11,6 +11,7 @@ import org.springframework.context.annotation.*;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 import spoon.Launcher;
 import spoon.compiler.Environment;
+import spoon.processing.AbstractProcessor;
 import spoon.support.sniper.SniperJavaPrettyPrinter;
 
 import java.util.Optional;
@@ -53,20 +54,28 @@ public class BotExecutor implements Condition {
         botAttributes.setTargetDirectory("/Users/fafdmzx/srccode/output/");
         botAttributes.setLineNumber(40);
         try {
+            AbstractProcessor processor=null;
             ProcessFinder processFinder=new ProcessFinder();
-            Launcher launcher = new Launcher();
-            Environment environment = launcher.getEnvironment();
-            environment.setPrettyPrinterCreator(() -> new SniperJavaPrettyPrinter(environment));
-            environment.disableConsistencyChecks();
-            environment.setCopyResources(botAttributes.isCopyResources());
-            environment.setAutoImports(botAttributes.isAutoImports());
-            launcher.addProcessor(processFinder.findProcessor(botAttributes));
-            launcher.addInputResource(botAttributes.getVulnerableFile());
-            launcher.setSourceOutputDirectory(botAttributes.getTargetDirectory());
-            launcher.run();
+            processor=processFinder.findProcessor(botAttributes);
+            if(processor!=null) {
+                Launcher launcher = new Launcher();
+                Environment environment = launcher.getEnvironment();
+                environment.setPrettyPrinterCreator(() -> new SniperJavaPrettyPrinter(environment));
+                environment.disableConsistencyChecks();
+                environment.setCopyResources(botAttributes.isCopyResources());
+                environment.setAutoImports(botAttributes.isAutoImports());
+                launcher.addProcessor(processor);
+                launcher.addInputResource(botAttributes.getVulnerableFile());
+                launcher.setSourceOutputDirectory(botAttributes.getTargetDirectory());
+                launcher.run();
+            }
+            else{
+                throw new RuntimeException("Vulnerability type is not FOUND.");
+            }
 
         } catch (Exception e) {
-            e.printStackTrace();
+            LOGGER.error("Exception In Processor",e);
+           // e.printStackTrace();
         }
     }
 }

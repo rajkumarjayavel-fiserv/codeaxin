@@ -47,7 +47,7 @@ public class UnreleasedResourceTransformationImpl implements ResourceTransformat
                         newTryNode.getBody().getStatements().stream().filter(e->e.equals(ctLocalVariable)).findFirst().get().delete();
                         break;
                     }
-                }
+                }//Find the Nearest Parent Try Block
                 if(ctLocalVariable.getAssignment()!=null) {
                     resourceDeclaration.setValue(ctLocalVariable.getType() + " " + ctLocalVariable.getSimpleName() + " = null");
                     newTryNode.insertBefore(resourceDeclaration);
@@ -55,14 +55,17 @@ public class UnreleasedResourceTransformationImpl implements ResourceTransformat
                     resourceAssignment.setValue(ctLocalVariable.getSimpleName() + " = " + expression);
                     newTryNode.getBody().insertBegin(resourceAssignment);
                 }
+                //Without Try Block - wrap with new try block
                 else if(!newTryNode.isParentInitialized()){
                     element.getBody().getStatements().stream().filter(e->e.equals(ctLocalVariable)).findFirst().get().delete();
                     newTryNode.setBody(element.getBody().clone());
                     newTryNode.setParent(element.getBody().getParent());
                     element.setBody(newTryNode);
                 }
-                if(resourceDeclaration.getValue()==null)
-                newTryNode.insertBefore(ctLocalVariable);
+                //Add the Resource Declaration precedence of the try block
+                if(resourceDeclaration.getValue()==null) {
+                    newTryNode.insertBefore(ctLocalVariable);
+                }
 
                finallyBlock.insertBegin(snippet);
                newTryNode.setFinalizer(finallyBlock);
@@ -73,7 +76,7 @@ public class UnreleasedResourceTransformationImpl implements ResourceTransformat
             resources.clear();
             resourcesClosed.clear();
         } catch (Exception e) {
-            LOGGER.error("Exception IN UNreleased Res",e);
+            LOGGER.error("Exception IN UNreleased Response",e);
             e.printStackTrace();
         }
 
