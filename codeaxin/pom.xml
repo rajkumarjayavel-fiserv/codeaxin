@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.5.0</version>
+
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.codeaxin</groupId>
+	<artifactId>codeaxin</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>codeaxin</name>
+	<description>Cyber-Shield Initiative</description>
+	<properties>
+		<java.version>11</java.version>
+		<version.junit>4.12</version.junit>
+		<pVersion.compiler>3.8.0</pVersion.compiler>
+		<pVersion.surefire>3.0.0-M5</pVersion.surefire>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>fr.inria.gforge.spoon</groupId>
+			<artifactId>spoon-core</artifactId>
+			<!-- See rendered release value at http://spoon.gforge.inria.fr/ -->
+			<version>9.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${version.junit}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${pVersion.compiler}</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${pVersion.surefire}</version>
+				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
+					<!-- the following is required to have the same execution semantics
+						as eclipse (hence all tests passing) -->
+					<useSystemClassLoader>false</useSystemClassLoader>
+					<forkCount>1</forkCount>
+					<argLine>-Dgumtree.match.gt.minh=1</argLine>
+					<!-- we put the tests in src/main/java so that it's easier to navigate and understand on Github (recall that's an example code project, not a production app or library ) -->
+					<testSourceDirectory>${basedir}/src/main/java/</testSourceDirectory>
+					<testClassesDirectory>${project.build.directory}/classes/</testClassesDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
