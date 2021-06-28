@@ -1,20 +1,21 @@
 package com.codeaxin.codeaxin;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import spoon.reflect.code.*;
 import spoon.reflect.declaration.CtMethod;
-import spoon.reflect.path.CtRole;
 import spoon.reflect.visitor.filter.TypeFilter;
-import spoon.support.reflect.code.CtCodeSnippetStatementImpl;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class UnreleasedResourceTransformationImpl implements ResourceTransformation<CtMethod>{
+    private static final Logger LOGGER = LogManager.getLogger(UnreleasedResourceTransformationImpl.class);
+
     public void executeUnreleasedResourceTransfrom( CtMethod element,ResourceIdentifier resourceIdentifier){
       List<CtLocalVariable>  resources=resourceIdentifier.getResources();
       List<String> resourcesClosed=resourceIdentifier.getResourcesClosed();
@@ -26,7 +27,8 @@ public class UnreleasedResourceTransformationImpl implements ResourceTransformat
             CtCatch newCatch = element.getFactory().createCatch(); //Create New CATCH Node data model
             CtTryWithResource ctTryWithResource=element.getFactory().createTryWithResource();
             CtBlock finallyBlock = element.getFactory().Core().createBlock();
-          //  resources= resources.stream().filter(e->e.getSimpleName().equals("input")).collect(Collectors.toList());
+            CtCodeSnippetStatement resourceDeclaration = element.getFactory().Core().createCodeSnippetStatement();
+            //  resources= resources.stream().filter(e->e.getSimpleName().equals("input")).collect(Collectors.toList());
             for (CtLocalVariable ctLocalVariable : resources) {
                 CtCodeSnippetStatement snippet = element.getFactory().Core().createCodeSnippetStatement();
                 System.out.println("ctLocalVariable:"+ctLocalVariable);
@@ -47,7 +49,6 @@ public class UnreleasedResourceTransformationImpl implements ResourceTransformat
                     }
                 }
                 if(ctLocalVariable.getAssignment()!=null) {
-                    CtCodeSnippetStatement resourceDeclaration = element.getFactory().Core().createCodeSnippetStatement();
                     resourceDeclaration.setValue(ctLocalVariable.getType() + " " + ctLocalVariable.getSimpleName() + " = null");
                     newTryNode.insertBefore(resourceDeclaration);
                     CtCodeSnippetStatement resourceAssignment = element.getFactory().Core().createCodeSnippetStatement();
@@ -60,15 +61,19 @@ public class UnreleasedResourceTransformationImpl implements ResourceTransformat
                     newTryNode.setParent(element.getBody().getParent());
                     element.setBody(newTryNode);
                 }
+                if(resourceDeclaration.getValue()==null)
                 newTryNode.insertBefore(ctLocalVariable);
+
                finallyBlock.insertBegin(snippet);
                newTryNode.setFinalizer(finallyBlock);
+                System.out.println("ctLocalVariable:" + ctLocalVariable);
             }
-          //  System.out.println("Resources:" + resources);
-            System.out.println("Matched:" + element.getBody());
+
+            LOGGER.debug("Matched:" + element.getBody());
             resources.clear();
             resourcesClosed.clear();
         } catch (Exception e) {
+            LOGGER.error("Exception IN UNreleased Res",e);
             e.printStackTrace();
         }
 

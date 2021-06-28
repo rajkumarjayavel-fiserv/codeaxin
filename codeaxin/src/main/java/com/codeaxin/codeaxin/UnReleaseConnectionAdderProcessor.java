@@ -4,7 +4,7 @@ import spoon.Launcher;
 import spoon.compiler.Environment;
 import spoon.processing.AbstractProcessor;
 import spoon.reflect.CtModel;
-import spoon.reflect.code.*;
+import spoon.reflect.code.CtLocalVariable;
 import spoon.reflect.declaration.CtMethod;
 import spoon.support.sniper.SniperJavaPrettyPrinter;
 

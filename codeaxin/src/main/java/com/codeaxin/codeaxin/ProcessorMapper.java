@@ -1,8 +1,8 @@
 package com.codeaxin.codeaxin;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import spoon.processing.AbstractProcessor;
+
 @Service
 public enum ProcessorMapper {
 
@@ -10,6 +10,7 @@ public enum ProcessorMapper {
     UNRELEASED_RESOURCES{
         @Override
         AbstractProcessor getProcessor(BotAttributes botAttributes) {
+
             DetectResources detectResources=new UnReleasedResourceDetectionImpl();
             ResourceTransformation resourceTransformation=new UnreleasedResourceTransformationImpl();
             UnreleasedResourceProcessorImpl processor=new UnreleasedResourceProcessorImpl(botAttributes,detectResources,resourceTransformation);

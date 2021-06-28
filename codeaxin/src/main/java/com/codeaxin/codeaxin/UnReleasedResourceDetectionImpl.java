@@ -1,6 +1,10 @@
 package com.codeaxin.codeaxin;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.boot.logging.LoggerGroup;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import spoon.reflect.code.CtInvocation;
@@ -20,6 +24,8 @@ import java.util.stream.Collectors;
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class UnReleasedResourceDetectionImpl implements DetectResources<CtMethod>{
+    private static final Logger LOGGER = LogManager.getLogger(UnReleasedResourceDetectionImpl.class);
+
     private final List<String> privateApiPackages = Arrays.asList("java.sql.Connection", "java.io.FileInputStream", "java.io.InputStream","java.io.OutputStream");
 
     @Override
@@ -29,19 +35,12 @@ public class UnReleasedResourceDetectionImpl implements DetectResources<CtMethod
         List<String> resourcesClosed = new ArrayList<String>();
         List<CtElement> lineElement=new ArrayList<>();
         if(attributes.getLineNumber()>0){
-            lineElement =  element.getBody().getElements(new Filter() {
-                @Override
-                public boolean matches(CtElement ctElement) {
-                    boolean math=false;
-                    try {
-                        math =  ctElement.getPosition().getLine() == attributes.getLineNumber();
-                    }catch (Exception e){}
-                    return math;
-                }
-            });
             try {
-                resources= lineElement.stream().map(e->e.getElements(new TypeFilter(CtLocalVariable.class))).findAny().orElseThrow(() -> new Exception("Line Number is not matched"));
+               // resources= lineElement.stream().map(e->e.getElements(new TypeFilter(CtLocalVariable.class))).findAny().orElseThrow(() -> new Exception("Line Number is not matched"));
+                CtLocalVariable ctLocalVariable=element.getElements(new TypeFilter<>(CtLocalVariable.class)).stream().filter(e->e.getPosition().getLine()==attributes.getLineNumber()).findAny().orElseThrow(() -> new Exception("Line Number is not matched"));
+                 resources.add(ctLocalVariable);
             } catch (Exception e) {
+                LOGGER.error("Exceptiom in detect Resources",e);
                 e.printStackTrace();
             }
         }

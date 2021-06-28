@@ -1,6 +1,4 @@
-
 import com.google.common.base.MoreObjects;
-import com.gyft.shop.PaymentMethod;
 import org.joda.time.DateTime;
 
 import java.math.BigDecimal;
