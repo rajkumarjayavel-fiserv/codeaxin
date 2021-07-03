@@ -6,7 +6,7 @@ public class JavaSourceTreeView extends Launcher {
         JavaSourceTreeView obj = new JavaSourceTreeView();
         String fullJavaFilePath="";
         if(args.length<1)
-            fullJavaFilePath = JavaSourceTreeView.class.getClassLoader().getResource("UnreleaseConnection.java").getPath();
+            fullJavaFilePath = JavaSourceTreeView.class.getClassLoader().getResource("UnreleaseConnection_tryblock.java").getPath();
         else
             args[0]=fullJavaFilePath;
         obj.runGuiLauncher(fullJavaFilePath);

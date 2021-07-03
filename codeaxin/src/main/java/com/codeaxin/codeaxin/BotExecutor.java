@@ -40,19 +40,31 @@ public class BotExecutor implements Condition {
         }
 
        BotExecutor botExecutor= applicationContext.getBean(BotExecutor.class);
-       botExecutor.processExecutor();
+       botExecutor.processExecutor(args);
        SpringApplication.exit(configurableApplicationContext, () -> 0);
         LOGGER.info("Info level log message");
         LOGGER.debug("Debug level log message");
         LOGGER.error("Error level log message");
 
     }
+    public BotExecutor(){
 
-    public void processExecutor(){
-        botAttributes.setVulenaribilityType("UnReleaseResource:database");
-        botAttributes.setVulnerableFile(BotExecutor.class.getClassLoader().getResource("UnreleaseConnection.java").getPath());
-        botAttributes.setTargetDirectory("/Users/fafdmzx/srccode/output/");
-        botAttributes.setLineNumber(40);
+    }
+
+    public void processExecutor(String[] args){
+        if(args.length>=3){
+            botAttributes.setVulenaribilityType(args[0]);
+            botAttributes.setLineNumber(Integer.parseInt(args[1]));
+            botAttributes.setTargetDirectory(args[2]);
+            botAttributes.setVulnerableFile(args[3]);
+
+
+        }else {
+            botAttributes.setVulenaribilityType("UnReleaseResource:database");
+            botAttributes.setVulnerableFile(BotExecutor.class.getClassLoader().getResource("UnreleaseConnection_tryblock.java").getPath());
+            botAttributes.setTargetDirectory("/Users/fafdmzx/srccode/output/");
+           botAttributes.setLineNumber(40);
+        }
         try {
             AbstractProcessor processor=null;
             ProcessFinder processFinder=new ProcessFinder();

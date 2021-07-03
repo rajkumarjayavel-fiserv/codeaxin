@@ -30,6 +30,7 @@ public class UnReleasedResourceDetectionImpl implements DetectResources<CtMethod
 
     @Override
     public ResourceIdentifier identifyResources(CtMethod element, BotAttributes attributes) {
+        LOGGER.debug("Attr:"+attributes);
         ResourceIdentifier resourceIdentifier = new ResourceIdentifier();
         List<CtLocalVariable> resources = new ArrayList<>();
         List<String> resourcesClosed = new ArrayList<String>();
@@ -37,7 +38,11 @@ public class UnReleasedResourceDetectionImpl implements DetectResources<CtMethod
         if(attributes.getLineNumber()>0){
             try {
                // resources= lineElement.stream().map(e->e.getElements(new TypeFilter(CtLocalVariable.class))).findAny().orElseThrow(() -> new Exception("Line Number is not matched"));
-                CtLocalVariable ctLocalVariable=element.getElements(new TypeFilter<>(CtLocalVariable.class)).stream().filter(e->e.getPosition().getLine()==attributes.getLineNumber()).findAny().orElseThrow(() -> new Exception("Line Number is not matched"));
+                for(CtLocalVariable ctLocalVariable1:element.getElements(new TypeFilter<>(CtLocalVariable.class))){
+                    System.out.println(ctLocalVariable1);
+                    System.out.println(ctLocalVariable1.getPosition().getLine());
+                }
+                CtLocalVariable ctLocalVariable=element.getElements(new TypeFilter<>(CtLocalVariable.class)).stream().filter(e->e.getPosition().getLine()== attributes.getLineNumber()).findAny().orElseThrow(() -> new Exception("Line Number is not matched"));
                  resources.add(ctLocalVariable);
             } catch (Exception e) {
                 LOGGER.error("Exceptiom in detect Resources",e);

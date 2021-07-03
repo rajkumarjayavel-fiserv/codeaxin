@@ -55,7 +55,7 @@ public class UnReleaseConnectionAdderProcessor extends AbstractProcessor<CtMetho
             environment.setCopyResources(false);
             environment.setAutoImports(true);
             launcher.addProcessor(unReleaseConnectionAdderProcessor);
-            launcher.addInputResource(UnReleaseConnectionAdderProcessor.class.getClassLoader().getResource("UnreleaseConnection.java").getPath());
+            launcher.addInputResource(UnReleaseConnectionAdderProcessor.class.getClassLoader().getResource("UnreleaseConnection_tryblock.java").getPath());
             launcher.setSourceOutputDirectory("/Users/fafdmzx/srccode/output/");
             launcher.run();
             CtModel ctModel = launcher.getModel();

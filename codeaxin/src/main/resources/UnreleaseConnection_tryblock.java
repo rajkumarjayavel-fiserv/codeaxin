@@ -10,15 +10,15 @@ import java.net.MalformedURLException;
 /**
  * Created by nicolas on 20/11/2014.
  */
-public class UnreleaseConnection extends ClassLoader {
+public class UnreleaseConnection_tryblock extends ClassLoader {
     private final File directory;
 
-    public UnreleaseConnection(ClassLoader classLoader, File directory) {
+    public UnreleaseConnection_tryblock(ClassLoader classLoader, File directory) {
         super(classLoader);
         this.directory = directory;
     }
 
-    public UnreleaseConnection(File directory) {
+    public UnreleaseConnection_tryblock(File directory) {
         this.directory = directory;
     }
 

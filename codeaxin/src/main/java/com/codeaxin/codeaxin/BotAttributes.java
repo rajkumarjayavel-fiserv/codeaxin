@@ -16,8 +16,19 @@ public class BotAttributes {
     private String vulnerableFile;
     private String methodName;
     private String vulenaribilityType;
+
+    @Override
+    public String toString() {
+        return "BotAttributes{" +
+                "vulnerableFile='" + vulnerableFile + '\'' +
+                ", methodName='" + methodName + '\'' +
+                ", vulenaribilityType='" + vulenaribilityType + '\'' +
+                ", vulenaribilityName='" + vulenaribilityName + '\'' +
+                ", lineNumber=" + lineNumber +
+                '}';
+    }
+
     private String vulenaribilityName;
-    private CtTypeReference typeReference;
     private int lineNumber;
     private String closeableMethod="close";
     private String targetDirectory;

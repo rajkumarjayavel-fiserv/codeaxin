@@ -31,36 +31,31 @@ public class UnreleasedResourceTransformationImpl implements ResourceTransformat
             //  resources= resources.stream().filter(e->e.getSimpleName().equals("input")).collect(Collectors.toList());
             for (CtLocalVariable ctLocalVariable : resources) {
                 CtCodeSnippetStatement snippet = element.getFactory().Core().createCodeSnippetStatement();
-                System.out.println("ctLocalVariable:"+ctLocalVariable);
-//                CtCatchVariable<Throwable> newCatchVariable = this.getFactory().Core().<Throwable>createCatchVariable()
-//                        .<CtCatchVariable<Throwable>>setType(this.getFactory().Code().<Throwable>createCtTypeReference(java.lang.Exception.class))
-//                        .setSimpleName("e");
-//                newCatch.setParameter(newCatchVariable);
-//                newCatch.setBody(new CtCodeSnippetStatementImpl().setValue("e.printStackTrace()"));
-//                newTryNode.setCatchers(Arrays.asList(new CtCatch[]{newCatch}));
+                LOGGER.debug("ctLocalVariable:"+ctLocalVariable);
                 snippet.setValue("if (" + ctLocalVariable.getSimpleName() + " != null ) " + ctLocalVariable.getSimpleName() + "." + resourceIdentifier.getCloseableMethodName() + "()");
                 List<CtTry> ctBlocks= element.getBody().getElements(new TypeFilter<>(CtTry.class));
                 CtExpression expression=ctLocalVariable.getAssignment();
+                //Find the Nearest Parent Try Block
                 for(CtTry ctBlock:ctBlocks){
                     if(ctBlock.getBody().getStatements().stream().filter(e->e.equals(ctLocalVariable)).findFirst().isPresent()) {
                         newTryNode = ctBlock;
                         newTryNode.getBody().getStatements().stream().filter(e->e.equals(ctLocalVariable)).findFirst().get().delete();
                         break;
                     }
-                }//Find the Nearest Parent Try Block
-                if(ctLocalVariable.getAssignment()!=null) {
+                }
+                //Without Try Block - wrap with new try block
+                if(!newTryNode.isParentInitialized()){
+                    element.getBody().getStatements().stream().filter(e->e.equals(ctLocalVariable)).findFirst().get().delete();
+                    newTryNode.setBody(element.getBody().clone());
+                    newTryNode.setParent(element.getBody().getParent());
+                    element.setBody(newTryNode);
+                }
+               else if(ctLocalVariable.getAssignment()!=null) {
                     resourceDeclaration.setValue(ctLocalVariable.getType() + " " + ctLocalVariable.getSimpleName() + " = null");
                     newTryNode.insertBefore(resourceDeclaration);
                     CtCodeSnippetStatement resourceAssignment = element.getFactory().Core().createCodeSnippetStatement();
                     resourceAssignment.setValue(ctLocalVariable.getSimpleName() + " = " + expression);
                     newTryNode.getBody().insertBegin(resourceAssignment);
-                }
-                //Without Try Block - wrap with new try block
-                else if(!newTryNode.isParentInitialized()){
-                    element.getBody().getStatements().stream().filter(e->e.equals(ctLocalVariable)).findFirst().get().delete();
-                    newTryNode.setBody(element.getBody().clone());
-                    newTryNode.setParent(element.getBody().getParent());
-                    element.setBody(newTryNode);
                 }
                 //Add the Resource Declaration precedence of the try block
                 if(resourceDeclaration.getValue()==null) {
@@ -69,7 +64,8 @@ public class UnreleasedResourceTransformationImpl implements ResourceTransformat
 
                finallyBlock.insertBegin(snippet);
                newTryNode.setFinalizer(finallyBlock);
-                System.out.println("ctLocalVariable:" + ctLocalVariable);
+               System.out.println("ctLocalVariable:" + ctLocalVariable);
+               resourceDeclaration = element.getFactory().Core().createCodeSnippetStatement();
             }
 
             LOGGER.debug("Matched:" + element.getBody());
