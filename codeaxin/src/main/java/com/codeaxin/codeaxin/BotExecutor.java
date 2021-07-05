@@ -60,7 +60,7 @@ public class BotExecutor implements Condition {
 
 
         }else {
-            botAttributes.setVulenaribilityType("UnReleaseResource:database");
+            botAttributes.setVulenaribilityType("UnReleaseResource:file");
             botAttributes.setVulnerableFile(BotExecutor.class.getClassLoader().getResource("UnreleaseConnection_tryblock.java").getPath());
             botAttributes.setTargetDirectory("/Users/fafdmzx/srccode/output/");
            botAttributes.setLineNumber(40);

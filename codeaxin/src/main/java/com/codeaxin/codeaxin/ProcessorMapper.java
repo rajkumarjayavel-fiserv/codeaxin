@@ -7,12 +7,22 @@ import spoon.processing.AbstractProcessor;
 public enum ProcessorMapper {
 
 
-    UNRELEASED_RESOURCES{
+    UNRELEASED_RESOURCES_FILE{
         @Override
         AbstractProcessor getProcessor(BotAttributes botAttributes) {
 
             DetectResources detectResources=new UnReleasedResourceDetectionImpl();
             ResourceTransformation resourceTransformation=new UnreleasedResourceTransformationImpl();
+            UnreleasedResourceProcessorImpl processor=new UnreleasedResourceProcessorImpl(botAttributes,detectResources,resourceTransformation);
+            return processor;
+        }
+    },
+    UNRELEASED_RESOURCES_DB{
+        @Override
+        AbstractProcessor getProcessor(BotAttributes botAttributes) {
+
+            DetectResources detectResources=new UnReleasedResourceDetectionImpl();
+            ResourceTransformation resourceTransformation=new UnreleasedDBResourceTransformationImpl();
             UnreleasedResourceProcessorImpl processor=new UnreleasedResourceProcessorImpl(botAttributes,detectResources,resourceTransformation);
             return processor;
         }

@@ -22,7 +22,7 @@ public class BotExecutorTestCases {
         try {
             URL res= BotExecutorTestCases.class.getClassLoader().getResource("UnreleaseConnection_tryblock.java");
             String output=System.getProperty("user.dir")+File.separator+"generated";
-            final String[] args = {"UnReleaseResource:database","40",output,res.getFile()};
+            final String[] args = {"UnReleaseResource:file","40",output,res.getFile()};
 
             botExecutor.processExecutor(args);
 
@@ -36,7 +36,7 @@ public class BotExecutorTestCases {
             //if LineNumber is unknown or more than one resources are unclosed please mark it as '0'
             URL res= BotExecutorTestCases.class.getClassLoader().getResource("UnreleaseConnection_tryblockwithoutlinenumber.java");
             String output=System.getProperty("user.dir")+File.separator+"generated";
-            final String[] args = {"UnReleaseResource:database","0",output,res.getFile()};
+            final String[] args = {"UnReleaseResource:file","0",output,res.getFile()};
 
             botExecutor.processExecutor(args);
 
@@ -50,7 +50,7 @@ public class BotExecutorTestCases {
         try {
             URL res= BotExecutorTestCases.class.getClassLoader().getResource("UnreleaseConnection_tryresourceBlock.java");
             String output=System.getProperty("user.dir")+File.separator+"generated";
-            final String[] args = {"UnReleaseResource:database","41",output,res.getFile()};
+            final String[] args = {"UnReleaseResource:file","40",output,res.getFile()};
 
             botExecutor.processExecutor(args);
 
@@ -64,7 +64,21 @@ public class BotExecutorTestCases {
         try {
             URL res= BotExecutorTestCases.class.getClassLoader().getResource("UnreleaseConnection.java");
             String output=System.getProperty("user.dir")+File.separator+"generated";
-            final String[] args = {"UnReleaseResource:database","39",output,res.getFile()};
+            final String[] args = {"UnReleaseResource:file","39",output,res.getFile()};
+
+            botExecutor.processExecutor(args);
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void dbExecuteCase() throws Exception {
+        try {
+            URL res= BotExecutorTestCases.class.getClassLoader().getResource("JdbcSelectTest.java");
+            String output=System.getProperty("user.dir")+File.separator+"generated";
+            final String[] args = {"UnReleaseResource:database","6",output,res.getFile()};
 
             botExecutor.processExecutor(args);
 

@@ -6339,3 +6339,1226 @@ public class UnreleaseConnection_tryblock extends java.lang.ClassLoader {
 	}
 	return null;
 }
+07:05 12:58:03.381 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - Starting BotExecutorTestCases using Java 11.0.10 on ML-C02DX142MD6P with PID 26302 (started by fafdmzx in /Users/fafdmzx/srccode/CodeHackathon/codeaxin)
+07:05 12:58:03.387 [main] [DEBUG] [com.codeaxin.codeaxin.BotExecutorTestCases] - Running with Spring Boot v2.5.0, Spring v5.3.7
+07:05 12:58:03.389 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - No active profile set, falling back to default profiles: default
+07:05 12:58:05.006 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - Started BotExecutorTestCases in 1.971 seconds (JVM running for 3.695)
+07:05 12:58:06.793 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryblockwithoutlinenumber.java', methodName='null', vulenaribilityType='UnReleaseResource:database', vulenaribilityName='null', lineNumber=0}
+07:05 12:58:06.807 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input = new java.io.FileInputStream(file)
+07:05 12:58:06.849 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 12:58:06.851 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input = null;
+	java.io.InputStream input1 = null;
+	try {
+		input1 = new java.io.FileInputStream(file);
+		input = new java.io.FileInputStream(file);
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	} finally {
+		if (input1 != null ) input1.close();
+		if (input != null ) input.close();
+	}
+	return null;
+}
+07:05 12:58:06.978 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection.java', methodName='null', vulenaribilityType='UnReleaseResource:database', vulenaribilityName='null', lineNumber=39}
+07:05 12:58:06.980 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 12:58:06.990 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input1 = new java.io.FileInputStream(file);
+	try {
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input = new java.io.FileInputStream(file);
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} finally {
+		if (input1 != null ) input1.close();
+	}
+}
+07:05 12:58:07.088 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryblock.java', methodName='null', vulenaribilityType='UnReleaseResource:database', vulenaribilityName='null', lineNumber=40}
+07:05 12:58:07.091 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 12:58:07.094 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input1 = null;
+	try {
+		input1 = new java.io.FileInputStream(file);
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input = new java.io.FileInputStream(file);
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	} finally {
+		if (input1 != null ) input1.close();
+	}
+	return null;
+}
+07:05 12:58:07.213 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryresourceBlock.java', methodName='null', vulenaribilityType='UnReleaseResource:database', vulenaribilityName='null', lineNumber=41}
+07:05 12:58:07.214 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 12:58:07.219 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input1 = null;
+	try {
+		input1 = new java.io.FileInputStream(file);
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		try (java.io.InputStream input = new java.io.FileInputStream(file)) {
+			buffer = new java.io.ByteArrayOutputStream();
+			int data = input.read();
+			while (data != (-1)) {
+				buffer.write(data);
+				data = input.read();
+			} 
+		}
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	} finally {
+		if (input1 != null ) input1.close();
+	}
+	return null;
+}
+07:05 12:58:51.283 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - Starting BotExecutorTestCases using Java 11.0.10 on ML-C02DX142MD6P with PID 26359 (started by fafdmzx in /Users/fafdmzx/srccode/CodeHackathon/codeaxin)
+07:05 12:58:51.287 [main] [DEBUG] [com.codeaxin.codeaxin.BotExecutorTestCases] - Running with Spring Boot v2.5.0, Spring v5.3.7
+07:05 12:58:51.289 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - No active profile set, falling back to default profiles: default
+07:05 12:58:52.537 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - Started BotExecutorTestCases in 1.457 seconds (JVM running for 2.649)
+07:05 12:58:54.036 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryblockwithoutlinenumber.java', methodName='null', vulenaribilityType='UnReleaseResource:database', vulenaribilityName='null', lineNumber=0}
+07:05 12:58:54.047 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input = new java.io.FileInputStream(file)
+07:05 12:58:54.079 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 12:58:54.081 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input = null;
+	java.io.InputStream input1 = null;
+	try {
+		input1 = new java.io.FileInputStream(file);
+		input = new java.io.FileInputStream(file);
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	} finally {
+		if (input1 != null ) input1.close();
+		if (input != null ) input.close();
+	}
+	return null;
+}
+07:05 12:58:54.195 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection.java', methodName='null', vulenaribilityType='UnReleaseResource:database', vulenaribilityName='null', lineNumber=39}
+07:05 12:58:54.197 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 12:58:54.207 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input1 = new java.io.FileInputStream(file);
+	try {
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input = new java.io.FileInputStream(file);
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} finally {
+		if (input1 != null ) input1.close();
+	}
+}
+07:05 12:58:54.299 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryblock.java', methodName='null', vulenaribilityType='UnReleaseResource:database', vulenaribilityName='null', lineNumber=40}
+07:05 12:58:54.300 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 12:58:54.302 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input1 = null;
+	try {
+		input1 = new java.io.FileInputStream(file);
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input = new java.io.FileInputStream(file);
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	} finally {
+		if (input1 != null ) input1.close();
+	}
+	return null;
+}
+07:05 12:58:54.399 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryresourceBlock.java', methodName='null', vulenaribilityType='UnReleaseResource:database', vulenaribilityName='null', lineNumber=41}
+07:05 12:58:54.401 [main] [ERROR] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Exceptiom in detect Resources
+java.lang.Exception: Line Number is not matched
+	at com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl.lambda$identifyResources$1(UnReleasedResourceDetectionImpl.java:45) ~[classes/:?]
+	at java.util.Optional.orElseThrow(Optional.java:408) ~[?:?]
+	at com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl.identifyResources(UnReleasedResourceDetectionImpl.java:45) [classes/:?]
+	at com.codeaxin.codeaxin.UnreleasedResourceProcessorImpl.isToBeProcessed(UnreleasedResourceProcessorImpl.java:34) [classes/:?]
+	at com.codeaxin.codeaxin.UnreleasedResourceProcessorImpl.isToBeProcessed(UnreleasedResourceProcessorImpl.java:11) [classes/:?]
+	at spoon.support.visitor.ProcessingVisitor.scan(ProcessingVisitor.java:71) [spoon-core-9.0.0.jar:?]
+	at spoon.reflect.visitor.CtScanner.scan(CtScanner.java:170) [spoon-core-9.0.0.jar:?]
+	at spoon.reflect.visitor.CtScanner.scan(CtScanner.java:143) [spoon-core-9.0.0.jar:?]
+	at spoon.reflect.visitor.CtScanner.visitCtClass(CtScanner.java:336) [spoon-core-9.0.0.jar:?]
+	at spoon.support.reflect.declaration.CtClassImpl.accept(CtClassImpl.java:58) [spoon-core-9.0.0.jar:?]
+	at spoon.reflect.visitor.CtScanner.scan(CtScanner.java:178) [spoon-core-9.0.0.jar:?]
+	at spoon.support.visitor.ProcessingVisitor.scan(ProcessingVisitor.java:68) [spoon-core-9.0.0.jar:?]
+	at spoon.reflect.visitor.CtScanner.scan(CtScanner.java:170) [spoon-core-9.0.0.jar:?]
+	at spoon.reflect.visitor.CtScanner.scan(CtScanner.java:143) [spoon-core-9.0.0.jar:?]
+	at spoon.reflect.visitor.CtScanner.visitCtPackage(CtScanner.java:656) [spoon-core-9.0.0.jar:?]
+	at spoon.support.reflect.declaration.CtPackageImpl.accept(CtPackageImpl.java:88) [spoon-core-9.0.0.jar:?]
+	at spoon.reflect.visitor.CtScanner.scan(CtScanner.java:178) [spoon-core-9.0.0.jar:?]
+	at spoon.support.visitor.ProcessingVisitor.scan(ProcessingVisitor.java:68) [spoon-core-9.0.0.jar:?]
+	at spoon.support.QueueProcessingManager.process(QueueProcessingManager.java:118) [spoon-core-9.0.0.jar:?]
+	at spoon.support.QueueProcessingManager.process(QueueProcessingManager.java:132) [spoon-core-9.0.0.jar:?]
+	at spoon.support.compiler.jdt.JDTBasedSpoonCompiler.process(JDTBasedSpoonCompiler.java:195) [spoon-core-9.0.0.jar:?]
+	at spoon.Launcher.process(Launcher.java:781) [spoon-core-9.0.0.jar:?]
+	at spoon.Launcher.run(Launcher.java:725) [spoon-core-9.0.0.jar:?]
+	at com.codeaxin.codeaxin.BotExecutor.processExecutor(BotExecutor.java:82) [classes/:?]
+	at com.codeaxin.codeaxin.BotExecutorTestCases.tryresourceBlock(BotExecutorTestCases.java:55) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74) [spring-test-5.3.7.jar:5.3.7]
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84) [spring-test-5.3.7.jar:5.3.7]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-5.3.7.jar:5.3.7]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-5.3.7.jar:5.3.7]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-5.3.7.jar:5.3.7]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) [spring-test-5.3.7.jar:5.3.7]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.3.7.jar:5.3.7]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.3.7.jar:5.3.7]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.3.7.jar:5.3.7]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.3.7.jar:5.3.7]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) [junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53) [junit-rt.jar:?]
+07:05 12:59:52.204 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - Starting BotExecutorTestCases using Java 11.0.10 on ML-C02DX142MD6P with PID 26399 (started by fafdmzx in /Users/fafdmzx/srccode/CodeHackathon/codeaxin)
+07:05 12:59:52.207 [main] [DEBUG] [com.codeaxin.codeaxin.BotExecutorTestCases] - Running with Spring Boot v2.5.0, Spring v5.3.7
+07:05 12:59:52.208 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - No active profile set, falling back to default profiles: default
+07:05 12:59:53.547 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - Started BotExecutorTestCases in 1.648 seconds (JVM running for 2.783)
+07:05 12:59:55.036 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryblockwithoutlinenumber.java', methodName='null', vulenaribilityType='UnReleaseResource:database', vulenaribilityName='null', lineNumber=0}
+07:05 12:59:55.049 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input = new java.io.FileInputStream(file)
+07:05 12:59:55.088 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 12:59:55.090 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input = null;
+	java.io.InputStream input1 = null;
+	try {
+		input1 = new java.io.FileInputStream(file);
+		input = new java.io.FileInputStream(file);
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	} finally {
+		if (input1 != null ) input1.close();
+		if (input != null ) input.close();
+	}
+	return null;
+}
+07:05 12:59:55.202 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection.java', methodName='null', vulenaribilityType='UnReleaseResource:database', vulenaribilityName='null', lineNumber=39}
+07:05 12:59:55.204 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 12:59:55.214 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input1 = new java.io.FileInputStream(file);
+	try {
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input = new java.io.FileInputStream(file);
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} finally {
+		if (input1 != null ) input1.close();
+	}
+}
+07:05 12:59:55.303 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryblock.java', methodName='null', vulenaribilityType='UnReleaseResource:database', vulenaribilityName='null', lineNumber=40}
+07:05 12:59:55.305 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 12:59:55.308 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input1 = null;
+	try {
+		input1 = new java.io.FileInputStream(file);
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input = new java.io.FileInputStream(file);
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	} finally {
+		if (input1 != null ) input1.close();
+	}
+	return null;
+}
+07:05 12:59:55.374 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryresourceBlock.java', methodName='null', vulenaribilityType='UnReleaseResource:database', vulenaribilityName='null', lineNumber=40}
+07:05 12:59:55.375 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 12:59:55.379 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	try {
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input1 = null;
+		try (java.io.InputStream input = new java.io.FileInputStream(file)) {
+			input1 = new java.io.FileInputStream(file);
+			buffer = new java.io.ByteArrayOutputStream();
+			int data = input.read();
+			while (data != (-1)) {
+				buffer.write(data);
+				data = input.read();
+			} 
+		} finally {
+			if (input1 != null ) input1.close();
+		}
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	}
+	return null;
+}
+07:05 13:00:09.701 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - Starting BotExecutorTestCases using Java 11.0.10 on ML-C02DX142MD6P with PID 26446 (started by fafdmzx in /Users/fafdmzx/srccode/CodeHackathon/codeaxin)
+07:05 13:00:09.707 [main] [DEBUG] [com.codeaxin.codeaxin.BotExecutorTestCases] - Running with Spring Boot v2.5.0, Spring v5.3.7
+07:05 13:00:09.709 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - No active profile set, falling back to default profiles: default
+07:05 13:00:11.138 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - Started BotExecutorTestCases in 1.653 seconds (JVM running for 2.971)
+07:05 13:00:12.432 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryblockwithoutlinenumber.java', methodName='null', vulenaribilityType='UnReleaseResource:database', vulenaribilityName='null', lineNumber=0}
+07:05 13:00:12.446 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input = new java.io.FileInputStream(file)
+07:05 13:00:12.492 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:00:12.495 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input = null;
+	java.io.InputStream input1 = null;
+	try {
+		input1 = new java.io.FileInputStream(file);
+		input = new java.io.FileInputStream(file);
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	} finally {
+		if (input1 != null ) input1.close();
+		if (input != null ) input.close();
+	}
+	return null;
+}
+07:05 13:00:12.614 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection.java', methodName='null', vulenaribilityType='UnReleaseResource:database', vulenaribilityName='null', lineNumber=39}
+07:05 13:00:12.616 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:00:12.626 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input1 = new java.io.FileInputStream(file);
+	try {
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input = new java.io.FileInputStream(file);
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} finally {
+		if (input1 != null ) input1.close();
+	}
+}
+07:05 13:00:12.710 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryblock.java', methodName='null', vulenaribilityType='UnReleaseResource:database', vulenaribilityName='null', lineNumber=40}
+07:05 13:00:12.711 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:00:12.714 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input1 = null;
+	try {
+		input1 = new java.io.FileInputStream(file);
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input = new java.io.FileInputStream(file);
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	} finally {
+		if (input1 != null ) input1.close();
+	}
+	return null;
+}
+07:05 13:00:12.789 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryresourceBlock.java', methodName='null', vulenaribilityType='UnReleaseResource:database', vulenaribilityName='null', lineNumber=40}
+07:05 13:00:12.792 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:00:12.795 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	try {
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input1 = null;
+		try (java.io.InputStream input = new java.io.FileInputStream(file)) {
+			input1 = new java.io.FileInputStream(file);
+			buffer = new java.io.ByteArrayOutputStream();
+			int data = input.read();
+			while (data != (-1)) {
+				buffer.write(data);
+				data = input.read();
+			} 
+		} finally {
+			if (input1 != null ) input1.close();
+		}
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	}
+	return null;
+}
+07:05 13:20:45.257 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - Starting BotExecutorTestCases using Java 11.0.10 on ML-C02DX142MD6P with PID 28193 (started by fafdmzx in /Users/fafdmzx/srccode/CodeHackathon/codeaxin)
+07:05 13:20:45.261 [main] [DEBUG] [com.codeaxin.codeaxin.BotExecutorTestCases] - Running with Spring Boot v2.5.0, Spring v5.3.7
+07:05 13:20:45.263 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - No active profile set, falling back to default profiles: default
+07:05 13:20:46.689 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - Started BotExecutorTestCases in 1.708 seconds (JVM running for 3.177)
+07:05 13:20:48.348 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryblockwithoutlinenumber.java', methodName='null', vulenaribilityType='UnReleaseResource:file', vulenaribilityName='null', lineNumber=0}
+07:05 13:20:48.362 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input = new java.io.FileInputStream(file)
+07:05 13:20:48.407 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:20:48.411 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input = null;
+	java.io.InputStream input1 = null;
+	try {
+		input1 = new java.io.FileInputStream(file);
+		input = new java.io.FileInputStream(file);
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	} finally {
+		if (input1 != null ) input1.close();
+		if (input != null ) input.close();
+	}
+	return null;
+}
+07:05 13:20:48.550 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection.java', methodName='null', vulenaribilityType='UnReleaseResource:file', vulenaribilityName='null', lineNumber=39}
+07:05 13:20:48.552 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:20:48.561 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input1 = new java.io.FileInputStream(file);
+	try {
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input = new java.io.FileInputStream(file);
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} finally {
+		if (input1 != null ) input1.close();
+	}
+}
+07:05 13:20:48.648 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryblock.java', methodName='null', vulenaribilityType='UnReleaseResource:file', vulenaribilityName='null', lineNumber=40}
+07:05 13:20:48.650 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:20:48.652 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input1 = null;
+	try {
+		input1 = new java.io.FileInputStream(file);
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input = new java.io.FileInputStream(file);
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	} finally {
+		if (input1 != null ) input1.close();
+	}
+	return null;
+}
+07:05 13:20:48.718 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryresourceBlock.java', methodName='null', vulenaribilityType='UnReleaseResource:file', vulenaribilityName='null', lineNumber=40}
+07:05 13:20:48.719 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:20:48.723 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	try {
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input1 = null;
+		try (java.io.InputStream input = new java.io.FileInputStream(file)) {
+			input1 = new java.io.FileInputStream(file);
+			buffer = new java.io.ByteArrayOutputStream();
+			int data = input.read();
+			while (data != (-1)) {
+				buffer.write(data);
+				data = input.read();
+			} 
+		} finally {
+			if (input1 != null ) input1.close();
+		}
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	}
+	return null;
+}
+07:05 13:23:01.401 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - Starting BotExecutorTestCases using Java 11.0.10 on ML-C02DX142MD6P with PID 28374 (started by fafdmzx in /Users/fafdmzx/srccode/CodeHackathon/codeaxin)
+07:05 13:23:01.404 [main] [DEBUG] [com.codeaxin.codeaxin.BotExecutorTestCases] - Running with Spring Boot v2.5.0, Spring v5.3.7
+07:05 13:23:01.406 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - No active profile set, falling back to default profiles: default
+07:05 13:23:02.792 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - Started BotExecutorTestCases in 1.606 seconds (JVM running for 2.912)
+07:05 13:23:04.012 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryblockwithoutlinenumber.java', methodName='null', vulenaribilityType='UnReleaseResource:file', vulenaribilityName='null', lineNumber=0}
+07:05 13:23:04.033 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input = new java.io.FileInputStream(file)
+07:05 13:23:04.083 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:23:04.087 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input = null;
+	java.io.InputStream input1 = null;
+	try {
+		input1 = new java.io.FileInputStream(file);
+		input = new java.io.FileInputStream(file);
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	} finally {
+		if (input1 != null ) input1.close();
+		if (input != null ) input.close();
+	}
+	return null;
+}
+07:05 13:23:04.218 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection.java', methodName='null', vulenaribilityType='UnReleaseResource:file', vulenaribilityName='null', lineNumber=39}
+07:05 13:23:04.223 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:23:04.235 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input1 = new java.io.FileInputStream(file);
+	try {
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input = new java.io.FileInputStream(file);
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} finally {
+		if (input1 != null ) input1.close();
+	}
+}
+07:05 13:23:04.317 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryblock.java', methodName='null', vulenaribilityType='UnReleaseResource:file', vulenaribilityName='null', lineNumber=40}
+07:05 13:23:04.319 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:23:04.321 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input1 = null;
+	try {
+		input1 = new java.io.FileInputStream(file);
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input = new java.io.FileInputStream(file);
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	} finally {
+		if (input1 != null ) input1.close();
+	}
+	return null;
+}
+07:05 13:23:04.383 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryresourceBlock.java', methodName='null', vulenaribilityType='UnReleaseResource:file', vulenaribilityName='null', lineNumber=40}
+07:05 13:23:04.385 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:23:04.388 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	try {
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input1 = null;
+		try (java.io.InputStream input = new java.io.FileInputStream(file)) {
+			input1 = new java.io.FileInputStream(file);
+			buffer = new java.io.ByteArrayOutputStream();
+			int data = input.read();
+			while (data != (-1)) {
+				buffer.write(data);
+				data = input.read();
+			} 
+		} finally {
+			if (input1 != null ) input1.close();
+		}
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	}
+	return null;
+}
+07:05 13:24:31.522 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - Starting BotExecutorTestCases using Java 11.0.10 on ML-C02DX142MD6P with PID 28666 (started by fafdmzx in /Users/fafdmzx/srccode/CodeHackathon/codeaxin)
+07:05 13:24:31.525 [main] [DEBUG] [com.codeaxin.codeaxin.BotExecutorTestCases] - Running with Spring Boot v2.5.0, Spring v5.3.7
+07:05 13:24:31.527 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - No active profile set, falling back to default profiles: default
+07:05 13:24:32.914 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - Started BotExecutorTestCases in 1.612 seconds (JVM running for 2.855)
+07:05 13:24:34.268 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryblockwithoutlinenumber.java', methodName='null', vulenaribilityType='UnReleaseResource:file', vulenaribilityName='null', lineNumber=0}
+07:05 13:24:34.282 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input = new java.io.FileInputStream(file)
+07:05 13:24:34.325 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:24:34.328 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input = null;
+	java.io.InputStream input1 = null;
+	try {
+		input1 = new java.io.FileInputStream(file);
+		input = new java.io.FileInputStream(file);
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	} finally {
+		if (input1 != null ) input1.close();
+		if (input != null ) input.close();
+	}
+	return null;
+}
+07:05 13:24:34.450 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection.java', methodName='null', vulenaribilityType='UnReleaseResource:file', vulenaribilityName='null', lineNumber=39}
+07:05 13:24:34.452 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:24:34.461 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input1 = new java.io.FileInputStream(file);
+	try {
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input = new java.io.FileInputStream(file);
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} finally {
+		if (input1 != null ) input1.close();
+	}
+}
+07:05 13:24:34.555 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryblock.java', methodName='null', vulenaribilityType='UnReleaseResource:file', vulenaribilityName='null', lineNumber=40}
+07:05 13:24:34.556 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:24:34.558 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input1 = null;
+	try {
+		input1 = new java.io.FileInputStream(file);
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input = new java.io.FileInputStream(file);
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	} finally {
+		if (input1 != null ) input1.close();
+	}
+	return null;
+}
+07:05 13:24:34.640 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryresourceBlock.java', methodName='null', vulenaribilityType='UnReleaseResource:file', vulenaribilityName='null', lineNumber=40}
+07:05 13:24:34.641 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:24:34.645 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	try {
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input1 = null;
+		try (java.io.InputStream input = new java.io.FileInputStream(file)) {
+			input1 = new java.io.FileInputStream(file);
+			buffer = new java.io.ByteArrayOutputStream();
+			int data = input.read();
+			while (data != (-1)) {
+				buffer.write(data);
+				data = input.read();
+			} 
+		} finally {
+			if (input1 != null ) input1.close();
+		}
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	}
+	return null;
+}
+07:05 13:24:34.676 [main] [ERROR] [com.codeaxin.codeaxin.BotExecutor] - Exception In Processor
+java.lang.RuntimeException: Vulnerability type is not FOUND.
+	at com.codeaxin.codeaxin.BotExecutor.processExecutor(BotExecutor.java:85) [classes/:?]
+	at com.codeaxin.codeaxin.BotExecutorTestCases.dbExecuteCase(BotExecutorTestCases.java:83) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74) [spring-test-5.3.7.jar:5.3.7]
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84) [spring-test-5.3.7.jar:5.3.7]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-5.3.7.jar:5.3.7]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-5.3.7.jar:5.3.7]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-5.3.7.jar:5.3.7]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) [spring-test-5.3.7.jar:5.3.7]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.3.7.jar:5.3.7]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.3.7.jar:5.3.7]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.3.7.jar:5.3.7]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.3.7.jar:5.3.7]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) [junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53) [junit-rt.jar:?]
+07:05 13:25:21.744 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - Starting BotExecutorTestCases using Java 11.0.10 on ML-C02DX142MD6P with PID 28716 (started by fafdmzx in /Users/fafdmzx/srccode/CodeHackathon/codeaxin)
+07:05 13:25:21.748 [main] [DEBUG] [com.codeaxin.codeaxin.BotExecutorTestCases] - Running with Spring Boot v2.5.0, Spring v5.3.7
+07:05 13:25:21.750 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - No active profile set, falling back to default profiles: default
+07:05 13:25:23.048 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - Started BotExecutorTestCases in 1.491 seconds (JVM running for 2.625)
+07:05 13:25:24.410 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryblockwithoutlinenumber.java', methodName='null', vulenaribilityType='UnReleaseResource:file', vulenaribilityName='null', lineNumber=0}
+07:05 13:25:24.423 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input = new java.io.FileInputStream(file)
+07:05 13:25:24.465 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:25:24.467 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input = null;
+	java.io.InputStream input1 = null;
+	try {
+		input1 = new java.io.FileInputStream(file);
+		input = new java.io.FileInputStream(file);
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	} finally {
+		if (input1 != null ) input1.close();
+		if (input != null ) input.close();
+	}
+	return null;
+}
+07:05 13:25:24.579 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection.java', methodName='null', vulenaribilityType='UnReleaseResource:file', vulenaribilityName='null', lineNumber=39}
+07:05 13:25:24.581 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:25:24.588 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input1 = new java.io.FileInputStream(file);
+	try {
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input = new java.io.FileInputStream(file);
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} finally {
+		if (input1 != null ) input1.close();
+	}
+}
+07:05 13:25:24.676 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryblock.java', methodName='null', vulenaribilityType='UnReleaseResource:file', vulenaribilityName='null', lineNumber=40}
+07:05 13:25:24.677 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:25:24.680 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input1 = null;
+	try {
+		input1 = new java.io.FileInputStream(file);
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input = new java.io.FileInputStream(file);
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	} finally {
+		if (input1 != null ) input1.close();
+	}
+	return null;
+}
+07:05 13:25:24.743 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryresourceBlock.java', methodName='null', vulenaribilityType='UnReleaseResource:file', vulenaribilityName='null', lineNumber=40}
+07:05 13:25:24.744 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:25:24.746 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	try {
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input1 = null;
+		try (java.io.InputStream input = new java.io.FileInputStream(file)) {
+			input1 = new java.io.FileInputStream(file);
+			buffer = new java.io.ByteArrayOutputStream();
+			int data = input.read();
+			while (data != (-1)) {
+				buffer.write(data);
+				data = input.read();
+			} 
+		} finally {
+			if (input1 != null ) input1.close();
+		}
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	}
+	return null;
+}
+07:05 13:25:24.804 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/JdbcSelectTest.java', methodName='null', vulenaribilityType='UnReleaseResource:database', vulenaribilityName='null', lineNumber=7}
+07:05 13:25:24.807 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.sql.Connection conn = java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/ebookshop?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC", "myuser", "xxxx")
+07:05 13:25:24.808 [main] [ERROR] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Exception IN UNreleased Response
+java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:148) ~[?:?]
+	at com.codeaxin.codeaxin.UnreleasedDBResourceTransformationImpl.executeUnreleasedResourceTransfrom(UnreleasedDBResourceTransformationImpl.java:48) [classes/:?]
+	at com.codeaxin.codeaxin.UnreleasedDBResourceTransformationImpl.executeUnreleasedResourceTransfrom(UnreleasedDBResourceTransformationImpl.java:14) [classes/:?]
+	at com.codeaxin.codeaxin.UnreleasedResourceProcessorImpl.process(UnreleasedResourceProcessorImpl.java:40) [classes/:?]
+	at com.codeaxin.codeaxin.UnreleasedResourceProcessorImpl.process(UnreleasedResourceProcessorImpl.java:11) [classes/:?]
+	at spoon.support.visitor.ProcessingVisitor.scan(ProcessingVisitor.java:72) [spoon-core-9.0.0.jar:?]
+	at spoon.reflect.visitor.CtScanner.scan(CtScanner.java:170) [spoon-core-9.0.0.jar:?]
+	at spoon.reflect.visitor.CtScanner.scan(CtScanner.java:143) [spoon-core-9.0.0.jar:?]
+	at spoon.reflect.visitor.CtScanner.visitCtClass(CtScanner.java:336) [spoon-core-9.0.0.jar:?]
+	at spoon.support.reflect.declaration.CtClassImpl.accept(CtClassImpl.java:58) [spoon-core-9.0.0.jar:?]
+	at spoon.reflect.visitor.CtScanner.scan(CtScanner.java:178) [spoon-core-9.0.0.jar:?]
+	at spoon.support.visitor.ProcessingVisitor.scan(ProcessingVisitor.java:68) [spoon-core-9.0.0.jar:?]
+	at spoon.reflect.visitor.CtScanner.scan(CtScanner.java:170) [spoon-core-9.0.0.jar:?]
+	at spoon.reflect.visitor.CtScanner.scan(CtScanner.java:143) [spoon-core-9.0.0.jar:?]
+	at spoon.reflect.visitor.CtScanner.visitCtPackage(CtScanner.java:656) [spoon-core-9.0.0.jar:?]
+	at spoon.support.reflect.declaration.CtPackageImpl.accept(CtPackageImpl.java:88) [spoon-core-9.0.0.jar:?]
+	at spoon.reflect.visitor.CtScanner.scan(CtScanner.java:178) [spoon-core-9.0.0.jar:?]
+	at spoon.support.visitor.ProcessingVisitor.scan(ProcessingVisitor.java:68) [spoon-core-9.0.0.jar:?]
+	at spoon.support.QueueProcessingManager.process(QueueProcessingManager.java:118) [spoon-core-9.0.0.jar:?]
+	at spoon.support.QueueProcessingManager.process(QueueProcessingManager.java:132) [spoon-core-9.0.0.jar:?]
+	at spoon.support.compiler.jdt.JDTBasedSpoonCompiler.process(JDTBasedSpoonCompiler.java:195) [spoon-core-9.0.0.jar:?]
+	at spoon.Launcher.process(Launcher.java:781) [spoon-core-9.0.0.jar:?]
+	at spoon.Launcher.run(Launcher.java:725) [spoon-core-9.0.0.jar:?]
+	at com.codeaxin.codeaxin.BotExecutor.processExecutor(BotExecutor.java:82) [classes/:?]
+	at com.codeaxin.codeaxin.BotExecutorTestCases.dbExecuteCase(BotExecutorTestCases.java:83) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74) [spring-test-5.3.7.jar:5.3.7]
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84) [spring-test-5.3.7.jar:5.3.7]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-5.3.7.jar:5.3.7]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-5.3.7.jar:5.3.7]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-5.3.7.jar:5.3.7]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) [spring-test-5.3.7.jar:5.3.7]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.3.7.jar:5.3.7]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.3.7.jar:5.3.7]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.3.7.jar:5.3.7]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.3.7.jar:5.3.7]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) [junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53) [junit-rt.jar:?]
+07:05 13:26:47.065 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - Starting BotExecutorTestCases using Java 11.0.10 on ML-C02DX142MD6P with PID 28837 (started by fafdmzx in /Users/fafdmzx/srccode/CodeHackathon/codeaxin)
+07:05 13:26:47.068 [main] [DEBUG] [com.codeaxin.codeaxin.BotExecutorTestCases] - Running with Spring Boot v2.5.0, Spring v5.3.7
+07:05 13:26:47.070 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - No active profile set, falling back to default profiles: default
+07:05 13:26:48.501 [main] [INFO] [com.codeaxin.codeaxin.BotExecutorTestCases] - Started BotExecutorTestCases in 1.637 seconds (JVM running for 2.833)
+07:05 13:26:50.097 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryblockwithoutlinenumber.java', methodName='null', vulenaribilityType='UnReleaseResource:file', vulenaribilityName='null', lineNumber=0}
+07:05 13:26:50.114 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input = new java.io.FileInputStream(file)
+07:05 13:26:50.160 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:26:50.163 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input = null;
+	java.io.InputStream input1 = null;
+	try {
+		input1 = new java.io.FileInputStream(file);
+		input = new java.io.FileInputStream(file);
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	} finally {
+		if (input1 != null ) input1.close();
+		if (input != null ) input.close();
+	}
+	return null;
+}
+07:05 13:26:50.276 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection.java', methodName='null', vulenaribilityType='UnReleaseResource:file', vulenaribilityName='null', lineNumber=39}
+07:05 13:26:50.278 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:26:50.285 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input1 = new java.io.FileInputStream(file);
+	try {
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input = new java.io.FileInputStream(file);
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} finally {
+		if (input1 != null ) input1.close();
+	}
+}
+07:05 13:26:50.350 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryblock.java', methodName='null', vulenaribilityType='UnReleaseResource:file', vulenaribilityName='null', lineNumber=40}
+07:05 13:26:50.351 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:26:50.353 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.io.InputStream input1 = null;
+	try {
+		input1 = new java.io.FileInputStream(file);
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input = new java.io.FileInputStream(file);
+		buffer = new java.io.ByteArrayOutputStream();
+		int data = input.read();
+		while (data != (-1)) {
+			buffer.write(data);
+			data = input.read();
+		} 
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	} finally {
+		if (input1 != null ) input1.close();
+	}
+	return null;
+}
+07:05 13:26:50.407 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/UnreleaseConnection_tryresourceBlock.java', methodName='null', vulenaribilityType='UnReleaseResource:file', vulenaribilityName='null', lineNumber=40}
+07:05 13:26:50.410 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.io.InputStream input1 = new java.io.FileInputStream(file)
+07:05 13:26:50.414 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	try {
+		java.io.File file = new java.io.File(directory, name.replaceAll("\\.", "/") + ".class");
+		if (!file.exists()) {
+			return super.loadClass(name);
+		}
+		java.io.ByteArrayOutputStream buffer;
+		java.io.InputStream input1 = null;
+		try (java.io.InputStream input = new java.io.FileInputStream(file)) {
+			input1 = new java.io.FileInputStream(file);
+			buffer = new java.io.ByteArrayOutputStream();
+			int data = input.read();
+			while (data != (-1)) {
+				buffer.write(data);
+				data = input.read();
+			} 
+		} finally {
+			if (input1 != null ) input1.close();
+		}
+		byte[] classData = buffer.toByteArray();
+		return defineClass(name, classData, 0, classData.length);
+	} catch (java.net.MalformedURLException e) {
+		e.printStackTrace();
+	} catch (java.io.IOException e) {
+		e.printStackTrace();
+	}
+	return null;
+}
+07:05 13:26:50.482 [main] [DEBUG] [com.codeaxin.codeaxin.UnReleasedResourceDetectionImpl] - Attr:BotAttributes{vulnerableFile='/Users/fafdmzx/srccode/CodeHackathon/codeaxin/target/classes/JdbcSelectTest.java', methodName='null', vulenaribilityType='UnReleaseResource:database', vulenaribilityName='null', lineNumber=6}
+07:05 13:26:50.487 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - ctLocalVariable:java.sql.Connection conn = java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/ebookshop?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC", "myuser", "xxxx")// For MySQL only
+
+07:05 13:26:50.490 [main] [DEBUG] [com.codeaxin.codeaxin.UnreleasedResourceTransformationImpl] - Matched:{
+	java.sql.Connection conn = null;
+	try {
+		conn = java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/ebookshop?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC", "myuser", "xxxx");
+		java.sql.Statement stmt = conn.createStatement();
+		// Step 3: Write a SQL query string. Execute the SQL query via the 'Statement'.
+		// The query result is returned in a 'ResultSet' object called 'rset'.
+		java.lang.String strSelect = "select title, price, qty from books";
+		java.lang.System.out.println(("The SQL statement is: " + strSelect) + "\n");// Echo For debugging
+
+		java.sql.ResultSet rset = stmt.executeQuery(strSelect);
+		// Step 4: Process the 'ResultSet' by scrolling the cursor forward via next().
+		// For each row, retrieve the contents of the cells with getXxx(columnName).
+		java.lang.System.out.println("The records selected are:");
+		int rowCount = 0;
+		// Row-cursor initially positioned before the first row of the 'ResultSet'.
+		// rset.next() inside the whole-loop repeatedly moves the cursor to the next row.
+		// It returns false if no more rows.
+		while (rset.next()) {
+			// Repeatedly process each row
+			java.lang.String title = rset.getString("title");// retrieve a 'String'-cell in the row
+
+			double price = rset.getDouble("price");// retrieve a 'double'-cell in the row
+
+			int qty = rset.getInt("qty");// retrieve a 'int'-cell in the row
+
+			java.lang.System.out.println((((title + ", ") + price) + ", ") + qty);
+			++rowCount;
+		} 
+		java.lang.System.out.println("Total number of records = " + rowCount);
+	} catch (java.sql.SQLException ex) {
+		ex.printStackTrace();
+	} finally {
+		if (conn != null ) conn.close();
+	}// Step 5: Close conn and stmt - Done automatically by try-with-resources (JDK 7)
+
+}

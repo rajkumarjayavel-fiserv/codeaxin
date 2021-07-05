@@ -37,8 +37,9 @@ public class UnreleaseConnection_tryresourceBlock extends ClassLoader {
                     data = input.read();
 
                 }
+                InputStream input1 = new FileInputStream(file);
             }
-            InputStream input1 = new FileInputStream(file);
+
            byte[] classData = buffer.toByteArray();
        return defineClass(name, classData, 0, classData.length);
         } catch (MalformedURLException e) {
